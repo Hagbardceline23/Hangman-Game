@@ -38,7 +38,7 @@ var arrayWords = [
        }
 
        function getLetterToString(getLetter) {
-           var userLetterString = string.fromKeyCode;
+           var userLetterString = string.fromcharcode;
            return userLetterString;
        }
 
