@@ -19,7 +19,7 @@ var arrayWords = [
 
        If (correctGuess < 1) 
         
-       document.getElementById(message).innerHTML = ("Sorry, you lost press any key to play again.");
+       document.getElementById(message).innerHTML = ("Sorry you lost. Press any  letter key to play again.");
 
        else
        document.getElementById(message).innerHTML = ("To begin playing Hangman, guess the letters of a computer generated word by pressing any letter key on the keypad.");
