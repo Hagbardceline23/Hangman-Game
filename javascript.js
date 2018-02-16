@@ -3,6 +3,7 @@ var correctLetter = null;
 var gameWord = null;
 var letterPlayerGuessed = null;
 var gameIsFinished = false;
+var correctGuess = 10;
 var arrayWords = [
 "frog",
 "jump",
@@ -10,21 +11,27 @@ var arrayWords = [
 "lean",
 ];
 
-   while gameIsFinished === false {
+   while (gameIsFinished === false )
+
        var wordIndex = math.floor(math.random() * array_words.length);
 
        gameWord = array_words[wordIndex];
 
-       document.getElementById(message).innerHTML = "To begin playing Hangman, guess the letters of a computer generated word by pressing any letter key on the keypad."
+       If (correctGuess < 1) 
+        
+       document.getElementById(message).innerHTML = ("Sorry, you lost press any key to play again.");
+
+       else
+       document.getElementById(message).innerHTML = ("To begin playing Hangman, guess the letters of a computer generated word by pressing any letter key on the keypad.");
         
        function getLetter() {
-           userLetter = event.keycode;
+           userLetter = event.charcode;
            return userLetter;
        }
 
        function checkLetter(getLetter) {
 
-           if (getLetter < 65) || (getLetter > 90)
+           if (getLetter < 65) || (getLetter > 122)
 
            document.getMessageById("message").innerHTML = ("The key that you enetered isn't a letter. Pease try again by striking a letter key to enter your guess");
 
@@ -46,7 +53,8 @@ var arrayWords = [
 
 while (i < gameWord.length) {
     gameWord = gameWord.split("");
-    if (gameWord[i] = userLetterString)
+    if 
+    (gameWord[i] = userLetterString) || (gameWord[i].toUpperCase())
     (correctWord[i] === gameWord[i])
     correctGuess ++;
     alreadyUsedLetter.pushgameWord[i];
@@ -56,7 +64,11 @@ while (i < gameWord.length) {
        elseif
        (i === gameWord.length-1) && (gameWord.join("") === correctWord)
        gameScore ++;
+       var answer = createElement('<div>')
+       answer = innerHTML = correctWord
+       exisiting HTMLDivElement.appendchild(answer);
        document.getElementById("message").innerHTML =("Congratulations - your score is" + gameScore);
 
    }
+   gameIsFinished = true;
 }
