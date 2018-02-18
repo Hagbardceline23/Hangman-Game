@@ -4,8 +4,8 @@ body {
     background-repeat: no-repeat; 
 }
 
-# message {
-    color: black;
+#id message {
+    background-color: #666;
 
 }
 
