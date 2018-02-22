@@ -3,10 +3,9 @@ var allowedGuesses;
 var userGuesses;
 var correctGuesses = [];
 var alreadyUsedLetters = [];
-var messageElement = document.getElementById('message');
 var wordElement = document.getElementById('word');
 var lettersGuessedElement = document.getElementById('lettersGuessed');
-var letterCountElement = document.getElementById('lettercount')
+var lettercountelement = document.getElementById('lettercount')
 
 function initializeGame() {
     var arrayWords = [
@@ -35,10 +34,10 @@ document.getElementById("message").innerHTML = ("To begin playing Hnagman, guess
 function updateGuesses(letterGuessed) {
     console.log(letterGuessed);
     // allowedGuesses--;
-    letterCountElement.innerHTML = allowedGuesses;
+    lettercountelement.innerHTML = allowedGuesses;
 
 
-    if (alreadyGuessedLetters.indexOf(letterGuessed) === -1) {
+    if (alreadyUsedLettters.indexOf(letterGuessed) === -1) {
         for (var i = 0; i < gameWord.length; i++) {
             console.log("hi")
             if (gameWord[i] === letterGuessed) {
@@ -47,27 +46,13 @@ function updateGuesses(letterGuessed) {
         }
         wordElement.innerHTML = correctGuesses.join('');
 
-        // push guessedLetter in to alreadyUsedLe)
-        alreadyGuessedLetters.push(lettersGuessedElement);
+        // push guessedLetter in to alreadyUsedLetters
+
         // Check to see if guessedLetter isn't inside of correctGuesses array (use indexOf again)
             // if yes, decrement guessesLeft and write that to the DOM
-             if (correctGuesses.indexOf(lettersGuessedElement) === -1) {
-                 allowedGuesses --;
-                 letterCountElement.innerHTML = allowedGuesses;
-             }
-        // Check to see if guessesLeft === 0
-          // if yes, you lose, increment losses and write it to the dom
-
-        if (allowedGuesses === 0) {
-           messageElement.innerHTML ="The game is over you lose";
-        }
-           
         
-          else if (correctGuesses.join('') === gameWord) {
-              messageElement.innerHTML = ("Congratulations, you win!")
-
-        }   
-                 
+        // Check to see if guessesLeft === 0
+            // if yes, you lose, increment losses and write it to the dom
         
         // Check for win (if correctGuesses.join('') === pickedWord)
             // if yes, you win!
