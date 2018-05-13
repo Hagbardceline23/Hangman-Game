@@ -29,7 +29,7 @@ function initializeGame() {
     wordElement.innerHTML = correctGuesses.join('');
     console.log(gameWord)
 }
-document.getElementById("message").innerHTML = ("To begin playing Hnagman, guess the letters of a computer generated word by pressing any key");
+document.getElementById("message").innerHTML = ("To begin playing Hangman, guess the letters of a computer generated word by pressing any key");
 
 function updateGuesses(letterGuessed) {
     console.log(letterGuessed);
